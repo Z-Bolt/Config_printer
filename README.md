@@ -8,8 +8,7 @@
   
 ## Как называть новые конфиги:
   
-  Config-XX-Xxx-XXxx.cfg
-         (1) (2) (3)
+  Config-(1)XX-(2)Xxx-(3)XXxx.cfg
   
 1) Вид прошивки:
     - KS - KlipperScreen
