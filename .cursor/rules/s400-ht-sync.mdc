@@ -1,0 +1,14 @@
+---
+description: Что не переносить с принтера в конфиг S400 HT v3.2 на GitHub
+alwaysApply: true
+---
+
+# S400 HT v3.2: шаблонные значения на GitHub
+
+При синхронизации `Fysetc Spider/RPi CM4/S400 HT v3.2` с машины эти поля не копировать. На GitHub оставлять шаблон:
+
+- `klipper-config/skew_correction.cfg`: `SET_SKEW XY=300,300,212.13`. Измеренные на принтере значения (например `299.70,300.30,212.28`) не переносить.
+- `klipper-config/bed.cfg`: `probe_count: 10,10`.
+- `klipper-config/steppers.cfg`: `rotation_distance` для X и Y всегда `40`, для всех Z всегда `8`. `dir_pin` осей не инвертировать при переносе с принтера.
+
+Калибровки конкретной машины в этих полях остаются только на принтере.
